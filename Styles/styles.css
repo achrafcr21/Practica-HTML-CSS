@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+}
+
+
+/*MENU PRINCIPAL*/
+.menu{
+    display: flex;
+    border: 1px solid black;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    background-color:#003a39;
+    color: white;
+}
+
+
+/**HEADER IMATGE**/
+.header-main img{
+    width: 100%;
+}
+
+
+/**Elementos header main**/
+.elemen{
+    font-family: Century Gothic;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+
+/**HOVER ELEMENTOS**/
+.elemen:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/**CONTENIDOR DE TEXT CAPCELERA**/
+.txt_container{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 1;            /*!Posa el text per sobre de la capcelera */
+   
+}
+/* *ESTILS TEXT CAPCELERA*/
+h1 {
+    font-family: Century Gothic;
+    color: white; /* Asegura que el texto sea legible */
+  }
+ 
+h1 strong {
+    font-family: Century Gothic;
+    font-weight: bold; /* Aplica negrita solo a la parte dentro de <strong> */
+}
+
+
+h2 {
+    font-family: Century Gothic;
+    color: white;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sobre-nosotros {
+    width: 80%;
+    margin: auto; /* Centrar la sección sobre nosotros */
+    overflow: hidden; /* Asegurar que el contenedor tenga en cuenta los elementos flotantes */
+  }
+  
+  .sobre-nosotros h3 {
+    text-align: left; /* Alinea el texto a la izquierda dentro de su contenedor */
+    margin-top: 20px; /* Espacio debajo del título */
+    border: 1px solid #000000;
+    width: 8em;
+    text-align: center;
+    
+
+  }
+  
+  /* Estilos para cada artículo que contiene la imagen y el texto */
+  .container-primera-parte,
+  .container-segunda-parte {
+    clear: both; /* Limpiar floats previos */
+    padding: 20px 0; /* Espacio arriba y abajo de cada artículo */
+  }
+  
+  /* Estilos para las imágenes */
+  .container-primera-parte img,
+  .container-segunda-parte img {
+    width: 35%; /* Ancho de la imagen */
+    margin: 0 20px 20px 0; /* Espacio alrededor de las imágenes */
+  }
+  
+  /* Estilos para los párrafos */
+  .container-primera-parte p,
+  .container-segunda-parte p {
+    width: 60%; /* Ancho del párrafo */
+    text-align: justify; /* Justificar el texto */
+  }
+  
+  /* Ajustes específicos para la flotación de imagen y texto */
+  .container-primera-parte img {
+    float: left;
+  }
+  
+  .container-primera-parte p {
+    float: right;
+  }
+  
+  .container-segunda-parte img {
+    float: right;
+  }
+  
+  .container-segunda-parte p {
+    float: left;
+  }
+  
+  .menu-section h2,
+  .menu-section h3 {
+    text-align: center;
+  }
+  
+  .container_main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .container_main h3 {
+    margin-bottom: 1em;
+    border: 1px solid #000000;
+    width: 4em;
+    text-align: center;
+  }
+  
+  #menu-general{
+    border: solid 1px #003a39;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+  /* Estilos para la sección de la Carta */
+  .container_main .menu-item {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    border: 1px solid #000000; /* Borde para cada menú */
+    margin-bottom: 20px; /* Espacio entre cada menú */
+    padding: 15px;
+  }
+
+  .container_main .menu-item h4 {
+    border: 2px solid #000; /* Borde negro para el título del menú */
+    margin-right: 20px; /* Espacio a la derecha del título del menú */
+    padding: 10px; /* Espacio interior alrededor del texto */
+    background-color: #f8f8f8; /* Color de fondo para el título del menú */
+    width: auto; /* Ancho automático basado en el contenido */
+}
+  .container_main .menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  .container_main .menu-content h5 {
+    margin-bottom: 0.5em;
+  }
+  
+  .container_main .menu-content p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  .container_main .menu-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .container_main .menu-images .image-container {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .container_main .menu-images .image-container img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .image-container img{
+    width: 100%;
+  }
+
+  .container_main .menu-images .image-container .image-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Cambiado a relative para evitar que se superpongan con la cabecera */
+    margin-top: -45px; /* Ajusta este valor según el alto de tus subtítulos */
+  }
+    
+
+  /* Estilos para la sección de la Galería */
+  .Galeria {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .Galeria h3 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  
+  .Galeria .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr)); /* Las imágenes se ajustan y centran automáticamente */
+    gap: 10px;
+    justify-content: center; /* Centra las imágenes en la grilla */
+  }
+  
+  .Galeria .image-item {
+    border: 3px solid #ccc; /* Borde por defecto para todas las imágenes */
+    position: relative; /* Para posicionar el overlay oscuro */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .Galeria .image-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.3s ease-in-out; /* Transición suave para el filtro */
+  }
+  
+  .Galeria .image-item:active img,
+  .Galeria .image-item:focus img,
+  .Galeria .image-item:hover img {
+    filter: brightness(50%); /* Oscurece la imagen al seleccionar */
+  }
+  
+  /* Clase adicional para oscurecer imágenes específicas */
+  .darken-image img {
+    filter: brightness(70%);
+  }
+  
+
+
+  .footer {
+    background-color: #a05656; /* Color de fondo del footer */
+    padding: 10px 0; /* Relleno superior e inferior */
+    border-top: 1px solid #000000; /* Borde superior */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribuir los elementos uniformemente */
+    align-items: center; /* Alinear los elementos verticalmente */
+    max-width: 1200px; /* O el ancho máximo que prefieras */
+    margin: auto; /* Centrar el contenido del footer */
+    padding: 0 20px; /* Relleno horizontal */
+}
+
+.footer-item {
+    display: flex;
+    align-items: center; /* Alinear ícono y texto verticalmente */
+}
+
+.footer-item img {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    width: 24px;
+}
+
+.footer-item span {
+    white-space: nowrap; /* Evitar que el texto se envuelva en varias líneas */
+    font-size: 0.9em; /* Tamaño de fuente */
+    color: #ffffff; /* Color de texto */
+}
