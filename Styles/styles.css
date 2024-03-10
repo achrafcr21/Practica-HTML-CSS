@@ -152,29 +152,41 @@ h2 {
     padding-top: 1%;
     padding-bottom: 1%;
   }
-  /* Estilos para la sección de la Carta */
-  .container_main .menu-item {
-    display: flex;
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    border: 1px solid #000000; /* Borde para cada menú */
-    margin-bottom: 20px; /* Espacio entre cada menú */
-    padding: 15px;
-  }
 
-  .container_main .menu-item h4 {
-    border: 2px solid #000; /* Borde negro para el título del menú */
-    margin-right: 20px; /* Espacio a la derecha del título del menú */
-    padding: 10px; /* Espacio interior alrededor del texto */
-    background-color: #f8f8f8; /* Color de fondo para el título del menú */
-    width: auto; /* Ancho automático basado en el contenido */
-}
-  .container_main .menu-content {
-    display: flex;
-    flex-direction: column;
+  .menu-item-1{
+    background-color: blue;
+    display: grid;
     justify-content: center;
-    padding: 0 20px;
   }
+  
+/* Estilos para la sección de la Carta */
+.container_main .menu-item {
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr ;
+  grid-template-rows: 1fr;
+  /*align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  border: 1px solid #000000; /* Borde para cada menú */
+  margin-bottom: 20px; /* Espacio entre cada menú */
+  padding: 15px;
+}
+
+.menu-item-1 {
+  display: grid;
+  border: 2px solid #000; /* Borde negro para el título del menú */
+  margin: 20px; /* Espacio a la derecha del título del menú */
+  padding: 10px; /* Espacio interior alrededor del texto */
+  background-color: #f8f8f8; /* Color de fondo para el título del menú */
+  width: auto; /* Ancho automático basado en el contenido */
+  align-items: center;
+}
+.container_main .menu-content {
+  display: grid;
+  grid-column: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+  
   
   .container_main .menu-content h5 {
     margin-bottom: 0.5em;
@@ -186,10 +198,8 @@ h2 {
   }
   
   .container_main .menu-images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
   
   .container_main .menu-images .image-container {
@@ -294,4 +304,63 @@ h2 {
     white-space: nowrap; /* Evitar que el texto se envuelva en varias líneas */
     font-size: 0.9em; /* Tamaño de fuente */
     color: #ffffff; /* Color de texto */
+}
+
+
+
+
+
+/*Segona part de practica*/
+@media (max-width: 768px) {
+  .main, .Galeria, .container_main {
+      width: 100%; /* Hace que los contenedores ocupen el ancho completo */
+  }
+
+  
+  .menu {
+      flex-direction: column; /* Cambia la disposición de los elementos del menú a vertical */
+      align-items: center; /* Alinea los elementos del menú en el centro */
+  }
+
+  .Galeria .image-gallery {
+      grid-template-columns: repeat(2, 1fr); /* Muestra las imágenes en 2 columnas */
+  }
+
+}
+
+
+@media (max-width: 576px) {
+  .main, .Galeria, .container_main {
+      width: 100%;
+  }
+
+  .menu {
+      flex-direction: column; /* Cambia la disposición a vertical */
+      align-items: center; /* Centra los elementos */
+  }
+
+  .Galeria .image-gallery {
+      grid-template-columns: 1fr; /* Una sola columna para las imágenes */
+  }
+
+  /* Esconde el cuadro principal menú en la sección de la carta */
+  #menu-general {
+      display: none;
+  }
+
+  /* Ajustes para el footer */
+  .footer-content {
+      flex-direction: column; /* Organiza los elementos del footer en columna */
+      text-align: center; /* Centra el texto */
+  }
+
+  .footer-item:not(:first-child) {
+      margin-top: 10px; /* Añade espacio entre los elementos del footer */
+  }
+
+  /* Esconde el elemento del restaurante en el footer */
+  .footer-item:nth-child(3) {
+      display: none;
+  }
+
 }
